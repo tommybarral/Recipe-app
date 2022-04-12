@@ -50,7 +50,7 @@ class WelcomeScreen extends StatelessWidget {
                           child: Text('Sign Up', style: TextStyle(fontSize: 18),),
                       ),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                     Container(
                       height: 55,
                       child: RaisedButton(
