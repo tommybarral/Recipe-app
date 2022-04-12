@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:receip_design_app/screens/content_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
+
+  Widget authentificationButton(Color buttonColor, Color textColor, String buttonTitle, BuildContext context, Widget routeName) {
+    return Container(
+      height: 55,
+      child: RaisedButton(
+        color: buttonColor,
+        textColor: textColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        elevation: 5,
+        onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+          return routeName;
+        })),
+        child: Text(buttonTitle, style: const TextStyle(fontSize: 18),),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,34 +56,9 @@ class WelcomeScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Container(
-                      height: 55,
-                      child: RaisedButton(
-                        color: Colors.deepOrangeAccent,
-                        textColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        elevation: 5,
-                          onPressed: () {},
-                          child: Text('Sign Up', style: TextStyle(fontSize: 18),),
-                      ),
-                    ),
+                    authentificationButton(Colors.deepOrangeAccent, Colors.white, 'Sign Up', context, const ContentScreen()),
                     SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                    Container(
-                      height: 55,
-                      child: RaisedButton(
-                        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
-                        color: Colors.white,
-                        textColor: Colors.black,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        elevation: 2,
-                        onPressed: () {},
-                        child: Text('Log In', style: TextStyle(fontSize: 18),),
-                      ),
-                    ),
+                    authentificationButton(Colors.white, Colors.black, 'Log In', context, const ContentScreen()),
                   ],
                 ),
               ),
