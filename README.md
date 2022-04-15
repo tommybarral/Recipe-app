@@ -3,8 +3,10 @@
 Recipes Design app / Application de recettes.
 
 ## packages used / paquets utilisés
-- provider: version 6.0.2
 
-** IMPORTANT: ** The first screenshot is the original project from a Designer.
+
+** IMPORTANT: ** Replicate Design.
+
 ![original.png](images/original.png)
 ![cap1.png](images/cap1.png)
+![cap2.png](images/cap2.png)

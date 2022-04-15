@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:receip_design_app/screens/content_screen.dart';
+import '../screens/content_screen.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
 
   Widget authentificationButton(Color buttonColor, Color textColor, String buttonTitle, BuildContext context, Widget routeName) {
-    return Container(
+    return SizedBox(
       height: 55,
       child: RaisedButton(
         color: buttonColor,
@@ -29,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 4,
-              child: Container(
+              child: SizedBox(
                 height: MediaQuery.of(context).size.width,
                 width: double.infinity,
                 child: Image.network(
